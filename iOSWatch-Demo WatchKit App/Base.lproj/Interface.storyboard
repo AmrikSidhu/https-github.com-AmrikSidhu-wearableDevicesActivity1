@@ -1,15 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iOSWatch_Demo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="134" alignment="center" text="Activity 1 :" textAlignment="center" id="E73-4v-1NG">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="italicSystem" weight="thin" pointSize="12"/>
+                        </label>
+                        <label width="136" alignment="center" text="Wearable Devices" textAlignment="center" id="qUQ-9H-9tW">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="italicSystem" weight="light" pointSize="11"/>
+                        </label>
+                        <label width="136" alignment="left" textAlignment="center" id="F9A-Rt-0lo">
+                            <color key="textColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                        </label>
+                        <label width="136" height="56" alignment="center" textAlignment="center" id="fSB-PG-Asg">
+                            <color key="textColor" red="0.93088163860103623" green="0.6212951146026866" blue="0.14351912564203748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="italicSystem" weight="light" pointSize="9"/>
+                        </label>
+                        <button width="1" height="12" alignment="center" verticalAlignment="bottom" title="reset" id="ahy-qQ-sbN">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="btnResetClicked" destination="AgC-eL-Hgc" id="wp4-W6-wNK"/>
+                            </connections>
+                        </button>
+                        <button width="98" height="24" alignment="center" verticalAlignment="bottom" title=" see on Phone " id="ufO-55-cAa" colorLabel="IBBuiltInLabel-Red">
+                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="backgroundColor" red="0.16001457253886009" green="0.10263443908001892" blue="0.010400942217736416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                            <connections>
+                                <action selector="watchButtonClicked" destination="AgC-eL-Hgc" id="Xe8-3g-tix"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="msgFromPhone" destination="fSB-PG-Asg" id="xsT-pd-Asr"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="202" y="121"/>
         </scene>
     </scenes>
 </document>

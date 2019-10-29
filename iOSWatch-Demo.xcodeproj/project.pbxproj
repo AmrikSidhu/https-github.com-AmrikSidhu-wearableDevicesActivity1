@@ -19,6 +19,8 @@
 		75C3859323561C7D009111B6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3859223561C7D009111B6 /* InterfaceController.swift */; };
 		75C3859523561C7D009111B6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3859423561C7D009111B6 /* ExtensionDelegate.swift */; };
 		75C3859723561C7E009111B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C3859623561C7E009111B6 /* Assets.xcassets */; };
+		75C385A723562963009111B6 /* InterFaceControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C385A623562963009111B6 /* InterFaceControllerTwo.swift */; };
+		75C385A823562963009111B6 /* InterFaceControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C385A623562963009111B6 /* InterFaceControllerTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,7 @@
 		75C3859423561C7D009111B6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		75C3859623561C7E009111B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C3859823561C7E009111B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C385A623562963009111B6 /* InterFaceControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterFaceControllerTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,7 @@
 				75C3859423561C7D009111B6 /* ExtensionDelegate.swift */,
 				75C3859623561C7E009111B6 /* Assets.xcassets */,
 				75C3859823561C7E009111B6 /* Info.plist */,
+				75C385A623562963009111B6 /* InterFaceControllerTwo.swift */,
 			);
 			path = "iOSWatch-Demo WatchKit Extension";
 			sourceTree = "<group>";
@@ -225,6 +229,7 @@
 					};
 					75C3857D23561C7C009111B6 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					75C3858C23561C7D009111B6 = {
 						CreatedOnToolsVersion = 10.3;
@@ -288,6 +293,7 @@
 			files = (
 				75C3857223561C78009111B6 /* ViewController.swift in Sources */,
 				75C3857023561C78009111B6 /* AppDelegate.swift in Sources */,
+				75C385A723562963009111B6 /* InterFaceControllerTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +303,7 @@
 			files = (
 				75C3859523561C7D009111B6 /* ExtensionDelegate.swift in Sources */,
 				75C3859323561C7D009111B6 /* InterfaceController.swift in Sources */,
+				75C385A823562963009111B6 /* InterFaceControllerTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,14 +515,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3L4954244;
 				IBSC_MODULE = iOSWatch_Demo_WatchKit_Extension;
 				INFOPLIST_FILE = "iOSWatch-Demo WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spritekitintroduction.iOSWatch-Demo.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.3;
@@ -527,10 +541,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3L4954244;
 				IBSC_MODULE = iOSWatch_Demo_WatchKit_Extension;
 				INFOPLIST_FILE = "iOSWatch-Demo WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "spritekitintroduction.iOSWatch-Demo.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
